@@ -5,15 +5,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from 'src/app/todos/components/header/header.component';
 import { TodosService } from 'src/app/todos/services/todos.service';
 import { MainComponent } from './components/main/main.component';
-import { TodoComponent } from './components/todo/todo.component';
-import { FooterComponent } from './components/footer/footer.component';
 
-const routes:Routes = [
+import { FooterComponent } from './components/footer/footer.component';
+import { TodoComponent } from './components/todo/todo.component';
+
+const routes: Routes = [
   {
-    path:'',
-    component: TodosComponent
-  }
-]
+    path: '',
+    component: TodosComponent,
+  },
+];
 
 @NgModule({
   declarations: [
@@ -21,12 +22,9 @@ const routes:Routes = [
     HeaderComponent,
     MainComponent,
     TodoComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ],
-  providers: [TodosService]
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  providers: [TodosService],
 })
-export class TodosModule { }
+export class TodosModule {}
